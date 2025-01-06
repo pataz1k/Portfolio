@@ -4,6 +4,7 @@ import { FC, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { motion, AnimatePresence } from 'framer-motion'
 import { TextMorph } from '../../components/motion-ui/TextMorph'
+import { sendMessage } from '../../services/telegram'
 
 type Inputs = {
 	tgUsername: string
@@ -20,8 +21,8 @@ const EnhancedContactForm: FC = () => {
 	const [isSubmitSuccessful, setIsSubmitSuccessful] = useState(false)
 
 	const onSubmit: SubmitHandler<Inputs> = async (data) => {
-		await new Promise((resolve) => setTimeout(resolve, 1000))
-		console.log(data)
+		await sendMessage(data.question, data.tgUsername)
+
 		reset()
 		setIsSubmitSuccessful(true)
 		setTimeout(() => setIsSubmitSuccessful(false), 3000)

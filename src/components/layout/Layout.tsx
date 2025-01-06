@@ -6,7 +6,7 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
 	return (
 		<div className="flex flex-col min-h-screen">
 			<SpotlightBackground />
-			<main className="flex-grow z-10">{children}</main>
+			<main className="flex-grow z-10 ">{children}</main>
 			<footer className="z-20">
 				<AnimatedTabs />
 			</footer>

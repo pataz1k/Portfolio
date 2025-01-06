@@ -4,9 +4,10 @@ export function SpotlightBackground() {
 	return (
 		<>
 			<Spotlight
-				className="from-purple-500 via-purple-600 to-purple-400 blur-2xl dark:from-purple-900 dark:via-purple-500 dark:to-purple-900"
+				className="from-purple-500 via-purple-600 to-purple-400 blur-2xl dark:from-purple-900 dark:via-purple-500 dark:to-purple-900 hidden md:block"
 				size={128}
 			/>
+
 			<div className="absolute inset-0">
 				<svg className="h-full w-full">
 					<defs>

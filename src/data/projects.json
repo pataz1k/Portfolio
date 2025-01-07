@@ -1,0 +1,27 @@
+[
+	{
+		"id": 1,
+		"title": "Twitter Clone",
+		"description": "test desc",
+		"images": [
+			"https://i.imgur.com/U5ex2he.png",
+			"https://i.imgur.com/dzg36Uv.png"
+		],
+		"link": "https://pataz1k-twitter-clone.vercel.app/",
+		"githubUrl": "https://github.com/pataz1k/Twitter-Clone",
+		"techStack": [
+			"React",
+			"Next.js",
+			"TypeScript",
+			"Zustand",
+			"Tailwind CSS",
+			"SASS",
+			"Socket.io",
+			"React Query",
+			"Node.js",
+			"Express",
+			"MongoDB",
+			"JWT"
+		]
+	}
+]

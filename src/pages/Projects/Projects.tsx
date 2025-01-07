@@ -1,6 +1,8 @@
-import { FC } from "react";
+import { FC } from 'react'
+import ProjectsList from './ProjectsList'
+import projects from '../../data/projects.json'
 
 const Projects: FC = () => {
-  return <div>Projects</div>;
-};
-export default Projects;
+	return <ProjectsList projects={projects} />
+}
+export default Projects

@@ -51,7 +51,7 @@ const ImageGallery: FC<{ images: string[] }> = ({ images }) => {
 					</motion.div>
 				))}
 			</div>
-
+			{/* 
 			<AnimatePresence>
 				{isFullScreen && (
 					<FullScreenGallery
@@ -60,7 +60,7 @@ const ImageGallery: FC<{ images: string[] }> = ({ images }) => {
 						onClose={() => setIsFullScreen(false)}
 					/>
 				)}
-			</AnimatePresence>
+			</AnimatePresence> */}
 		</div>
 	)
 }

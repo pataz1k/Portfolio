@@ -1,7 +1,6 @@
-import { cn } from '../../lib/utils'
-import { AnimatePresence, motion } from 'motion/react'
+import { motion } from 'motion/react'
 import { FC, useState } from 'react'
-import FullScreenGallery from './FullScreenGallery'
+import { cn } from '../../lib/utils'
 
 // import FullScreenGallery from './FullScreenGallery'
 

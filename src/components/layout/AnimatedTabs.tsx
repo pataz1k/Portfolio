@@ -1,8 +1,11 @@
-import { motion } from 'motion/react'
+import { AnimatePresence, motion } from 'framer-motion'
 import { NavLink } from 'react-router'
+import { useState } from 'react'
 import { Tabs } from './Tabs'
 
 export function AnimatedTabs() {
+	const [hoveredTab, setHoveredTab] = useState<string | null>(null)
+
 	return (
 		<nav className="flex items-center gap-4 rounded-3xl bg-neutral-800/40 px-6 py-3 backdrop-blur-md border border-white/10 shadow-lg">
 			{Tabs.map(({ path, icon: Icon, label }) => (
@@ -14,6 +17,8 @@ export function AnimatedTabs() {
 							isActive ? 'text-white' : 'text-zinc-400 hover:text-zinc-100'
 						}`
 					}
+					onMouseEnter={() => setHoveredTab(path)}
+					onMouseLeave={() => setHoveredTab(null)}
 				>
 					{({ isActive }) => (
 						<>
@@ -28,6 +33,19 @@ export function AnimatedTabs() {
 									transition={{ type: 'spring', stiffness: 380, damping: 30 }}
 								/>
 							)}
+							<AnimatePresence>
+								{hoveredTab === path && (
+									<motion.div
+										className="absolute left-1/2 -top-10 transform -translate-x-1/2 bg-neutral-800/40 backdrop-blur-md text-white px-3 py-1 rounded-md text-sm whitespace-nowrap border border-white/10"
+										initial={{ opacity: 0 }}
+										animate={{ opacity: 1 }}
+										exit={{ opacity: 0 }}
+										transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+									>
+										{label}
+									</motion.div>
+								)}
+							</AnimatePresence>
 						</>
 					)}
 				</NavLink>

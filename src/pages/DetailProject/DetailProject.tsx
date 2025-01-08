@@ -72,6 +72,29 @@ const DetailProject: FC = () => {
 
 			<ImageGallery images={project.images} />
 
+			<motion.div className="my-12 " variants={containerVariants}>
+				<motion.h2
+					className="text-3xl font-semibold mb-6 text-gradient bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent"
+					variants={itemVariants}
+				>
+					Features
+				</motion.h2>
+				<motion.ul
+					className="list-disc list-inside space-y-2"
+					variants={containerVariants}
+				>
+					{project.features.map((feature, index) => (
+						<motion.li
+							key={index}
+							variants={itemVariants}
+							className="text-gray-300"
+						>
+							{feature}
+						</motion.li>
+					))}
+				</motion.ul>
+			</motion.div>
+
 			<motion.div className="mb-12" variants={containerVariants}>
 				<motion.h2
 					className="text-3xl font-semibold mb-6 text-gradient bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent"

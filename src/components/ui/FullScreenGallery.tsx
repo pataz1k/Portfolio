@@ -59,7 +59,7 @@ const FullScreenGallery: FC<FullScreenGalleryProps> = ({
 			animate={{ opacity: 1 }}
 			exit={{ opacity: 0 }}
 			transition={{ duration: 0.3 }}
-			className="fixed inset-0 bg-opacity-90 flex items-center justify-center z-50 "
+			className="fixed inset-0 bg-opacity-90 bg-black flex items-center justify-center z-50 "
 			tabIndex={0}
 		>
 			<motion.img
@@ -67,8 +67,6 @@ const FullScreenGallery: FC<FullScreenGalleryProps> = ({
 				src={activeImage}
 				alt="fullscreen image"
 				className="max-h-full max-w-full object-contain"
-				initial={{ scale: 0.8, opacity: 0 }}
-				animate={{ scale: 1, opacity: 1 }}
 				exit={{ scale: 0.8, opacity: 0 }}
 				transition={{ duration: 0.3 }}
 			/>

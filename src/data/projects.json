@@ -2,7 +2,7 @@
 	{
 		"id": 1,
 		"title": "Twitter Clone",
-		"description": "test desc",
+		"description": "Experience the features of a modern social media platform with the Twitter Clone, a fully functional application inspired by the Twitter ecosystem. Designed with an elegant interface and packed with real-time features, this clone showcases robust development practices and cutting-edge web technologies.",
 		"images": [
 			"https://i.imgur.com/U5ex2he.png",
 			"https://i.imgur.com/dzg36Uv.png"
@@ -22,6 +22,12 @@
 			"Express",
 			"MongoDB",
 			"JWT"
+		],
+		"features": [
+			"Seamless user experience with a responsive design powered by Tailwind CSS and SASS.",
+			"Real-time updates enabled by Socket.io for a dynamic social feed.",
+			"State-of-the-art authentication and user security via JWT.",
+			"Optimized performance and state management with Zustand and React Query."
 		]
 	}
 ]

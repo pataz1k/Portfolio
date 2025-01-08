@@ -6,4 +6,5 @@ export interface IProject {
 	id: number
 	githubUrl: string
 	techStack: string[]
+	features: string[]
 }

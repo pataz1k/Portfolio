@@ -1,8 +1,7 @@
-import { motion } from 'motion/react'
+import { AnimatePresence, motion } from 'motion/react'
 import { FC, useState } from 'react'
 import { cn } from '../../lib/utils'
-
-// import FullScreenGallery from './FullScreenGallery'
+import FullScreenGallery from './FullScreenGallery'
 
 const ImageGallery: FC<{ images: string[] }> = ({ images }) => {
 	const [active, setActive] = useState(images[0])
@@ -50,7 +49,7 @@ const ImageGallery: FC<{ images: string[] }> = ({ images }) => {
 					</motion.div>
 				))}
 			</div>
-			{/* 
+
 			<AnimatePresence>
 				{isFullScreen && (
 					<FullScreenGallery
@@ -59,7 +58,7 @@ const ImageGallery: FC<{ images: string[] }> = ({ images }) => {
 						onClose={() => setIsFullScreen(false)}
 					/>
 				)}
-			</AnimatePresence> */}
+			</AnimatePresence>
 		</div>
 	)
 }
